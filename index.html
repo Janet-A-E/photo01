@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janet - Wedding Photography | Capturing Timeless Moments</title>
+    <meta name="description" content="Janet specializes in romantic wedding photography with artistic vision. Capturing timeless moments and creating beautiful memories that last a lifetime. Book your wedding photography session today.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles (1).css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-header">
+                <h1 class="logo">Janetphotography </h1>
+                <button class="nav-toggle" id="navToggle">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380" alt="Romantic wedding first dance at golden hour">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&h=1380" alt="Bride walking down aisle with emotional family watching">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380" alt="Candid moment of bride and groom laughing together outdoors">
+                <div class="slide-overlay"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Capturing Timeless<br>
+                <span class="accent">Moments</span>
+            </h1>
+            <p class="hero-subtitle">Every love story deserves to be told with artistry, passion, and elegance</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('gallery')">View Gallery</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('contact')">Get In Touch</button>
+            </div>
+        </div>
+        
+        <div class="hero-controls">
+            <button class="slider-btn prev" onclick="changeSlide(-1)">
+                <i data-lucide="chevron-left"></i>
+            </button>
+            <button class="slider-btn next" onclick="changeSlide(1)">
+                <i data-lucide="chevron-right"></i>
+            </button>
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Wedding Gallery</h2>
+                <p>Explore moments of love, joy, and celebration captured with artistic vision</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pre-wedding">Pre-Wedding</button>
+                <button class="filter-btn" data-filter="ceremony">Ceremony</button>
+                <button class="filter-btn" data-filter="reception">Reception</button>
+                <button class="filter-btn" data-filter="candid">Candid</button>
+            </div>
+            
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="pre-wedding">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Couple in lavender field during sunset">
+                    <div class="gallery-overlay">
+                        <i data-lucide="search"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="pre-wedding">
+                    <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Couple embracing under cherry blossoms">
+                    <div class="gallery-overlay">
+                        <i data-lucide="search"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ceremony">
+                    <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Beautiful wedding ceremony setup with flower arch">
+                    <div class="gallery-overlay">
+                        <i data-lucide="search"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ceremony">
+                    <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Bride and groom exchanging vows during outdoor ceremony">
+                    <div class="gallery-overlay">
+                        <i data-lucide="search"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="reception">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Elegant wedding reception table settings">
+                    <div class="gallery-overlay">
+                        <i data-lucide="search"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="candid">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Bride laughing with bridesmaids getting ready">
+                    <div class="gallery-overlay">
+                        <i data-lucide="search"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="candid">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Wedding guests dancing and celebrating">
+                    <div class="gallery-overlay">
+                        <i data-lucide="search"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="candid">
+                    <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Candid moment of couple laughing together">
+                    <div class="gallery-overlay">
+                        <i data-lucide="search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="photography-projects-1001.webp" alt="Janet - Wedding Photographer">
+                </div>
+                <div class="about-text">
+                    <h2>About Janet</h2>
+                    <p>Hello! I'm Janet, a wedding photographer from NR PURA, currently pursuing my BCA at yenepoya university manglore.From past 2 years i've been lucky enough to travel around capturing one of the most beautiful things in life -love stories <br>with over 8 years of experience capturing love stories across the globe. My approach combines artistic vision with documentary storytelling to create timeless images that reflect the unique essence of each couple.</p>
+                    <p>I believe that every love story is unique and deserves to be told with authenticity and elegance. My style is romantic yet natural, focusing on genuine emotions and candid moments that truly represent your special day.</p>
+                    <p>When I'm not behind the camera, you'll find me exploring new destinations, spending time with my family, or planning the next adventure. I'm honored to be part of your journey and look forward to creating beautiful memories together.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <i data-lucide="award"></i>
+                            <span>8+ Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <i data-lucide="heart"></i>
+                            <span>200+ Weddings</span>
+                        </div>
+                        <div class="stat">
+                            <i data-lucide="globe"></i>
+                            <span>Worldwide Coverage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Wedding Packages</h2>
+                <p>Choose from our carefully crafted packages designed to capture every precious moment of your special day</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Essential</h3>
+                        <p>Perfect for intimate ceremonies</p>
+                        <div class="price">$1,800</div>
+                    </div>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> 4 hours of coverage</li>
+                        <li><i data-lucide="check"></i> 200+ edited photos</li>
+                        <li><i data-lucide="check"></i> Online gallery</li>
+                        <li><i data-lucide="check"></i> High-resolution downloads</li>
+                        <li><i data-lucide="check"></i> Print release</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Choose Essential</button>
+                </div>
+                
+                <div class="service-card popular">
+                    <div class="popular-badge">
+                        <i data-lucide="star"></i>
+                        Most Popular
+                    </div>
+                    <div class="service-header">
+                        <h3>Complete</h3>
+                        <p>Our most comprehensive package</p>
+                        <div class="price">$3,200</div>
+                    </div>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> 8 hours of coverage</li>
+                        <li><i data-lucide="check"></i> 500+ edited photos</li>
+                        <li><i data-lucide="check"></i> Engagement session</li>
+                        <li><i data-lucide="check"></i> Online gallery</li>
+                        <li><i data-lucide="check"></i> USB drive with all images</li>
+                        <li><i data-lucide="check"></i> Print release</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Choose Complete</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Premium</h3>
+                        <p>Luxury experience with everything included</p>
+                        <div class="price">$4,800</div>
+                    </div>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Full day coverage</li>
+                        <li><i data-lucide="check"></i> 800+ edited photos</li>
+                        <li><i data-lucide="check"></i> Engagement session</li>
+                        <li><i data-lucide="check"></i> Second photographer</li>
+                        <li><i data-lucide="check"></i> Premium album</li>
+                        <li><i data-lucide="check"></i> Custom USB box</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Choose Premium</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Connect</h2>
+                <p>Ready to start planning your perfect wedding photography experience? I'd love to hear from you!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <div class="card">
+                        <h3>Send a Message</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="weddingDate">Wedding Date</label>
+                                <input type="date" id="weddingDate" name="weddingDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="venue">Venue/Location</label>
+                                <input type="text" id="venue" name="venue">
+                            </div>
+                            <div class="form-group">
+                                <label for="package">Package Interest</label>
+                                <select id="package" name="package">
+                                    <option value="">Select a package</option>
+                                    <option value="essential">Essential - $1,800</option>
+                                    <option value="complete">Complete - $3,200</option>
+                                    <option value="premium">Premium - $4,800</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Tell me about your vision</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Share your love story and vision for your wedding photography..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="card">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i data-lucide="mail"></i>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p>hello@janetphotography.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i data-lucide="phone"></i>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <p>+91 987465231</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i data-lucide="map-pin"></i>
+                                <div>
+                                    <strong>Location</strong>
+                                    <p>chikkamagaluru, n r pura ,karnataka.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Follow My Journey</h3>
+                        <div class="social-links">
+                            <a href="https://instagram.com/janetphotography" target="_blank">
+                                <i data-lucide="instagram"></i>
+                            </a>
+                            <a href="https://facebook.com/janetphotography" target="_blank">
+                                <i data-lucide="facebook"></i>
+                            </a>
+                            <a href="https://pinterest.com/janetphotography" target="_blank">
+                                <i data-lucide="heart"></i>
+                            </a>
+                            <a href="mailto:hello@janetphotography.com">
+                                <i data-lucide="mail"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Response Time</h3>
+                        <p>I typically respond to inquiries within 24-48 hours. For urgent requests, please call directly.</p>
+                        <p class="small">Available for weddings worldwide. Travel fees may apply for destinations outside the San Francisco Bay Area.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Janet Photography</h3>
+                    <p>Capturing timeless moments and creating beautiful memories that last a lifetime.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/janetphotography" target="_blank">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/janetphotography" target="_blank">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="https://pinterest.com/janetphotography" target="_blank">
+                            <i data-lucide="heart"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>hello@janetphotography.com</p>
+                    <p>+91 9800735378</p>
+                    <p>chikkamagaluru, n r pura ,karnataka. </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Janet Photography. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i data-lucide="x"></i>
+            </button>
+            <button class="lightbox-prev" onclick="lightboxPrev()">
+                <i data-lucide="chevron-left"></i>
+            </button>
+            <button class="lightbox-next" onclick="lightboxNext()">
+                <i data-lucide="chevron-right"></i>
+            </button>
+            <img id="lightboxImage" src="" alt="">
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script (1).js"></script>
+</body>
+</html>
